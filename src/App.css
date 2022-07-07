@@ -1,38 +1,61 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgb(238, 153, 5) 0%,
+    rgb(214, 255, 100) 100%
+  );
+}
 .App {
   text-align: center;
+  background: linear-gradient(
+    90deg,
+     rgb(214, 255, 100) 0%,
+     rgb(238, 153, 5) 100%
+  );
+  border: 10mm;
+  border-radius: 4mm;
+}
+.form-input {
+  width: 200px;
+  padding: 5px 20px 10px 20px;
+  text-align: left;
+  margin: 20px 10px;
+  background-color: rgb(236, 247, 162);
+  color:rgb(13, 14, 8);
+  font-size: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-button {
+  cursor: pointer;
+  width: 100px;
+  padding:  5px 20px 10px 20px;
+  text-align: center;
+  margin: 20px 10px;
+  background-color: rgb(164, 252, 189);
+  border-radius: 2mm;
+  color:rgb(13, 14, 8);
+  font-size: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    flex-direction: row;
+    justify-content: space-between;
+  width: 450px;
+  padding: 10px 10px 10px 10px;
+  margin: 15px 130px 15px 120px;
+  background-color: rgb(236, 247, 162);
+  border-style:ridge;
+  border-color: black;
+  color:rgb(13, 14, 8);
+  font-size: 15px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.delete-product {
+  color:rgb(228, 14, 57);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.edit-product {
+  color:rgb(91, 205, 239);
+
 }
