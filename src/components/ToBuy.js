@@ -9,7 +9,8 @@ function ToBuy({ products, existingProduct, removeProduct, updateQuantity }) {
     const [productToUpdate, setProductToUpdate] = useState({
         id: 0,
         text: '',
-        value: 0
+        value: '',
+        uni: ''
     });
     
     const handleUpdate = newQuantity => {
@@ -17,7 +18,8 @@ function ToBuy({ products, existingProduct, removeProduct, updateQuantity }) {
        setProductToUpdate({
         id: 0,
         text: '',
-        value: 0
+        value: '',
+        uni: ''
        });
     };
 
@@ -28,7 +30,7 @@ function ToBuy({ products, existingProduct, removeProduct, updateQuantity }) {
  //we must attribute an index to each child as products is a list of children
   return products.map((product, index) => (
       <div className='product-container' key={index}>
-      <div key={product.id} onClick={() => {existingProduct(product.id)}}>{product.text} * {product.value}</div>
+      <div key={product.id} onClick={() => {existingProduct(product.id)}}>{product.text} * {product.value} {product.uni}</div>
         <div>
         <RiCloseCircleLine onClick={() => {removeProduct(product.id)}} className='delete-product' />
         <TiEdit onClick={() => setProductToUpdate({ id: product.id, text: product.text, value: product.value })} className='edit-product'/>
